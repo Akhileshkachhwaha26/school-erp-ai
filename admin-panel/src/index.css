@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Dark mode overrides.
+   The app is built with a consistent slate-based Tailwind
+   palette (bg-white cards, bg-slate-50 page background,
+   text-slate-800/500/400, border-slate-200/100). Rather than
+   adding dark: variants to every single element across ~30
+   files, we flip these specific, consistently-used utility
+   classes globally whenever the <html> tag has the "dark"
+   class. This keeps the whole app consistent with one place
+   to maintain the dark palette.
+   ───────────────────────────────────────────────────────────── */
+.dark body { background-color: #0f172a; }
+
+.dark .bg-white { background-color: #1e293b !important; }
+.dark .bg-slate-50 { background-color: #0f172a !important; }
+.dark .bg-slate-100 { background-color: #334155 !important; }
+.dark .hover\:bg-slate-50:hover { background-color: #29354a !important; }
+.dark .hover\:bg-slate-200:hover { background-color: #3f4f66 !important; }
+
+.dark .text-slate-800 { color: #f1f5f9 !important; }
+.dark .text-slate-700 { color: #e2e8f0 !important; }
+.dark .text-slate-600 { color: #cbd5e1 !important; }
+.dark .text-slate-500 { color: #94a3b8 !important; }
+.dark .text-slate-400 { color: #64748b !important; }
+
+.dark .border-slate-200 { border-color: #334155 !important; }
+.dark .border-slate-100 { border-color: #293548 !important; }
+
+/* ─────────────────────────────────────────────────────────────
+   Print styles — used by the "Export as PDF" (browser print)
+   fallback and to keep printed pages clean if someone hits
+   Ctrl+P on a report page.
+   ───────────────────────────────────────────────────────────── */
+@media print {
+  aside, header, nav, button, .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+  }
+}
