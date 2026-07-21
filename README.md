@@ -20,13 +20,6 @@
 
 A modern, AI-integrated School ERP & Learning Management System built to digitize daily school operations — attendance, homework, exams, fees, and communication — for **Admins, Teachers, Students, and Parents**, each with their own dedicated portal.
 
-> 🎥 **Screenshots:** *(add screenshots here — drag & drop images directly into this README on GitHub, or save them into a `/docs/screenshots` folder and reference them like below)*
->
-> ```md
-> ![Login Page](docs/screenshots/login.png)
-> ![Admin Dashboard](docs/screenshots/admin-dashboard.png)
-> ![AI Doubt Solver](docs/screenshots/doubt-solver.png)
-> ```
 
 ---
 
